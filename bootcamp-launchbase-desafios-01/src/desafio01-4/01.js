@@ -50,14 +50,14 @@ function getDebitTransactions() {
   return transactionsDebit;
 }
 function getHigherTransactionByType() {
-  const transactionsDebit = [];
+  const transactionHigher = [];
   for (let transaction of user.transactions) {
     if (transaction.value > user.balance) {
-      transactionsDebit.push(transaction);
+      transactionHigher.push(transaction);
       getTransactionsCount();
     }
   }
-  return transactionsDebit;
+  return transactionHigher;
 }
 function getAverageTransactionValue(all) {
   let count = 0;
