@@ -23,11 +23,11 @@ createTransaction({
 });
 createTransaction({
   type: "debit",
-  value: 80
+  value: 10
 });
 createTransaction({
   type: "debit",
-  value: 30
+  value: 20
 });
 function getCreditTransactions() {
   const transactionsCredit = [];
@@ -50,10 +50,12 @@ function getDebitTransactions() {
   return transactionsDebit;
 }
 function getHigherTransactionByType(type) {
-  const transactionHigher = [];
+  let transactionHigher = [];
+  let higherTransaction = 0;
   for (let transaction of user.transactions) {
-    if (type === transaction.type && transaction.value > user.balance) {
-      transactionHigher.push(transaction);
+    if (type === transaction.type && transaction.value > higherTransaction) {
+      higherTransaction = transaction.value;
+      transactionHigher = transaction;
       getTransactionsCount();
     }
   }
