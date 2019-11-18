@@ -49,10 +49,10 @@ function getDebitTransactions() {
   }
   return transactionsDebit;
 }
-function getHigherTransactionByType() {
+function getHigherTransactionByType(type) {
   const transactionHigher = [];
   for (let transaction of user.transactions) {
-    if (transaction.value > user.balance) {
+    if (type === transaction.type && transaction.value > user.balance) {
       transactionHigher.push(transaction);
       getTransactionsCount();
     }
@@ -82,7 +82,7 @@ function getTransactionsCount() {
 }
 console.table(getCreditTransactions());
 console.table(getDebitTransactions());
-console.table(getHigherTransactionByType());
+console.table(getHigherTransactionByType("credit"));
 console.table(user);
 console.log(getTransactionsCount());
 console.log(`Balance: ${user.balance}`);
