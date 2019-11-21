@@ -1,0 +1,47 @@
+{%extends "layout.njk"%}
+{%block head%}
+  <link rel="stylesheet" href="/css/recipe.css">
+  {%endblock%}
+  {%block content%}
+    <section class="cards">
+      <div class="card" id="{{item.id}}">
+        <div class="card__image-container">
+          <img src="{{item.image}}" alt="Imagem de {{item.title}}"/>
+        </div>
+        <div class="card__content-title">
+          <p>Titulo:
+            {{item.title}}</p>
+        </div>
+        <div class="card__content-author">
+          <p>Autor:
+            {{item.author}}</p>
+        </div>
+        <div class="recipe">
+          <dl class="js-accordion">
+            <dt>
+              Ingredientes:
+            </dt>
+            <dd>
+              {% for i in item.ingredients %}
+                <li>{{i}}</li>
+              {% endfor %}
+            </dd>
+            <dt>Modo de Preparo:
+            </dt>
+            <dd>
+              {% for i in item.preparation %}
+                {{i}}
+              {% endfor %}
+            </dd>
+            <dt>Informações adicionais:
+            </dt>
+            <dd>{{item.information}}</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+    {%block script%}
+      <script src="/js/recipe.js"></script>
+
+      {%endblock%}
+      {%endblock%}

@@ -1,0 +1,44 @@
+body > section {
+  margin-top: 50px;
+  margin-left: 230px;
+  width: 940px;
+  height: 890px;
+}
+body > section > .about > h1 {
+  font-family: Roboto-Bold;
+  font-size: 24px;
+  color: #111111;
+  margin-bottom: 30px;
+}
+body > section > .about > p {
+  font-family: Roboto-Regular;
+  font-size: 18px;
+  color: #444444;
+  line-height: 28px;
+}
+body > section > .Howitallbegan > h2 {
+  font-family: Roboto-Bold;
+  font-size: 20px;
+  color: #111111;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+body > section > .Howitallbegan > p {
+  font-family: Roboto-Regular;
+  font-size: 18px;
+  color: #444444;
+  line-height: 28px;
+}
+body > section > .ourrecipes > h2 {
+  font-family: Roboto-Bold;
+  font-size: 20px;
+  color: #111111;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+body > section > .ourrecipes > p {
+  font-family: Roboto-Regular;
+  font-size: 18px;
+  color: #444444;
+  line-height: 28px;
+}
